@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.11.0.final using JasperReports Library version 6.11.0-0c4056ccaa4d25a5a8c45672d2f764ea3498bebb  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relatorio_teste" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="85464819-2e24-4727-8bee-0a84c80b0c91">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="99" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="0" width="400" height="80" uuid="83e4cce8-d783-47ad-94c9-90cc0f9449e7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TESTE DE RELATORIO]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="486" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="110" width="400" height="80" uuid="4da17652-2fad-4a02-9fe6-d8ef05d7e74c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TESTE DE RELATORIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="300" width="400" height="80" uuid="de7faea2-d3d2-4777-8dc0-bd19aeb800b5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TESTE DE RELATORIO]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>
