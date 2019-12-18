@@ -20,32 +20,7 @@
 		</band>
 	</title>
 	<detail>
-		<band height="486" splitType="Stretch">
-			<image hAlign="Center">
-				<reportElement x="10" y="10" width="170" height="160" uuid="f7d03467-9888-4342-9018-2a4c89f4ceee"/>
-				<imageExpression><![CDATA[$P{imagem}]]></imageExpression>
-			</image>
-			<image hAlign="Center">
-				<reportElement x="200" y="10" width="170" height="160" uuid="b8143621-b02b-4f06-b4f6-b38a6a86ab42"/>
-				<imageExpression><![CDATA[$P{imagem}]]></imageExpression>
-			</image>
-			<image hAlign="Center">
-				<reportElement x="390" y="10" width="170" height="160" uuid="3cdadbf9-7c47-4b30-a411-284e01f9afcd"/>
-				<imageExpression><![CDATA[$P{imagem}]]></imageExpression>
-			</image>
-			<image hAlign="Center">
-				<reportElement x="10" y="200" width="170" height="160" uuid="9ed089e8-88aa-4a87-8310-b7caa835db68"/>
-				<imageExpression><![CDATA[$P{imagem}]]></imageExpression>
-			</image>
-			<image hAlign="Center">
-				<reportElement x="200" y="200" width="170" height="160" uuid="e25c06a4-2ead-41a0-aba3-6628522d8543"/>
-				<imageExpression><![CDATA[$P{imagem}]]></imageExpression>
-			</image>
-			<image hAlign="Center">
-				<reportElement x="390" y="200" width="170" height="160" uuid="06201025-8d91-4a50-96c3-9ccf3213f757"/>
-				<imageExpression><![CDATA[$P{imagem}]]></imageExpression>
-			</image>
-		</band>
+		<band height="486" splitType="Stretch"/>
 	</detail>
 	<pageFooter>
 		<band height="54" splitType="Stretch"/>

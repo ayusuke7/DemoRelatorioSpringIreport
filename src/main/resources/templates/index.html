@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Layout fluide type Masonry en CSS</title>        
+        <style>
+            body {
+                background-color: #e0e0e0;
+            }
+            .grid-container {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                padding: 10px;
+            }
+            .grid-item {
+                padding: 10px;
+                display: flex;
+                text-align: center;    
+                width: 200px;
+                height: 250px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid-container">
+            <div class="grid-item"><img src="https://picsum.photos/id/10/640/480" alt="Lorem Picsum"></div>
+            <div class="grid-item"><img src="https://picsum.photos/id/100/512/720" alt="Lorem Picsum"></div>
+            <div class="grid-item"><img src="https://picsum.photos/id/1002/350" alt="Lorem Picsum"></div>
+            <div class="grid-item"><img src="https://picsum.photos/id/1018/340/550" alt="Lorem Picsum"></div>
+            <div class="grid-item"><img src="https://picsum.photos/id/1058/420/640" alt="Lorem Picsum"></div>
+            <div class="grid-item"><img src="https://picsum.photos/id/1069/350" alt="Lorem Picsum"></div>
+            <div class="grid-item"><img src="https://picsum.photos/id/1080/512/720" alt="Lorem Picsum"></div>
+            <div class="grid-item"><img src="https://picsum.photos/id/348/512" alt="Lorem Picsum"></div>
+        </div>
+    </body>
+</html>
