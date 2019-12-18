@@ -1,9 +1,11 @@
 package com.example.demo;
 
 import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.engine.design.JasperDesign;
 import net.sf.jasperreports.engine.export.JRPdfExporter;
 import net.sf.jasperreports.engine.util.JRLoader;
 import net.sf.jasperreports.engine.util.JRSaver;
+import net.sf.jasperreports.engine.xml.JRXmlLoader;
 import net.sf.jasperreports.export.SimpleExporterInput;
 import net.sf.jasperreports.export.SimpleOutputStreamExporterOutput;
 import org.springframework.core.io.InputStreamResource;
@@ -14,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import java.io.*;
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api")
@@ -39,14 +43,14 @@ public class DemoController {
 
         try {
 
-            String file = "/reports/relatorio_teste.jasper";
-            //String file = "/reports/relatorio_teste.jrxml";
-            InputStream employeeReportStream = getClass().getResourceAsStream(file);
+            String fileName = "/reports/relatorio_teste.jrxml";
+            JasperReport jasperReport = loadTemplate(fileName);
 
-            JasperReport jasperReport = (JasperReport) JRLoader.loadObject(employeeReportStream);
-            //JasperReport jasperReport = JasperCompileManager.compileReport(employeeReportStream);
-            JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, null);
-            //JRSaver.saveObject(jasperReport, "relatorio_teste.jasper");
+            Map<String, Object> params = new HashMap<>();
+            params.put("imagem", "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRJXR-yIRUVpzA0gVSNpbeQDhd6gtA89LCAkMCEESuUELD68hfg");
+
+            JRDataSource dataSource = new JREmptyDataSource();
+            JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, params, dataSource);
 
             JRPdfExporter pdfExporter = new JRPdfExporter();
             pdfExporter.setExporterInput(new SimpleExporterInput(jasperPrint));
@@ -68,4 +72,12 @@ public class DemoController {
         return null;
     }
 
+
+    private JasperReport loadTemplate(String template) throws JRException {
+
+        final InputStream reportInputStream = getClass().getResourceAsStream(template);
+        final JasperDesign jasperDesign = JRXmlLoader.load(reportInputStream);
+
+        return JasperCompileManager.compileReport(jasperDesign);
+    }
 }
